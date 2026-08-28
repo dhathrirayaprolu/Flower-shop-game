@@ -1,0 +1,6 @@
+{
+  "name": "Bloom & Thread",
+  "description": "A cozy flower shop simulation game where players arrange bouquets, tend to their botanical garden, fulfill customer requests, and unlock seasonal blooms with relaxing lo-fi music.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
