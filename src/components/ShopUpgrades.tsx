@@ -2,6 +2,7 @@ import React from 'react';
 import { GameState } from '../types';
 import { SHOP_UPGRADES } from '../data/customers';
 import { soundManager } from '../audio/soundManager';
+import { CoinIcon } from './CurrencyIcon';
 import { Sparkles, Check, ArrowUpRight, Store, ShieldCheck } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -37,9 +38,10 @@ export const ShopUpgradesView: React.FC<ShopUpgradesProps> = ({
 
         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#eee6da] shadow-xs">
           <span className="text-xs text-[#a69d91] font-medium">Available Funds:</span>
-          <span className="font-serif text-base font-bold text-[#4a4238]">
-            {gameState.coins} 🪙
-          </span>
+          <div className="flex items-center gap-1.5 font-serif text-base font-bold text-[#4a4238]">
+            <CoinIcon className="w-4 h-4" />
+            <span>{gameState.coins}</span>
+          </div>
         </div>
       </div>
 
@@ -68,8 +70,9 @@ export const ShopUpgradesView: React.FC<ShopUpgradesProps> = ({
                       <Check className="w-3 h-3" /> Unlocked
                     </span>
                   ) : (
-                    <span className="font-serif text-sm font-bold text-[#d68060] bg-[#d68060]/10 px-3 py-1 rounded-full border border-[#d68060]/20">
-                      {upgrade.cost} 🪙
+                    <span className="inline-flex items-center gap-1 font-serif text-sm font-bold text-[#d68060] bg-[#d68060]/10 px-3 py-1 rounded-full border border-[#d68060]/20">
+                      <CoinIcon className="w-3.5 h-3.5" />
+                      <span>{upgrade.cost}</span>
                     </span>
                   )}
                 </div>
@@ -105,8 +108,10 @@ export const ShopUpgradesView: React.FC<ShopUpgradesProps> = ({
                     }}
                     className="w-full py-2.5 rounded-full bg-[#8ca68e] hover:bg-[#7b947d] disabled:opacity-40 disabled:cursor-not-allowed text-white text-xs font-bold shadow-xs active:scale-95 transition-all flex items-center justify-center gap-1.5"
                   >
-                    <span>Purchase Upgrade ({upgrade.cost}🪙)</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
+                    <span>Purchase Upgrade</span>
+                    <CoinIcon className="w-3.5 h-3.5" />
+                    <span>{upgrade.cost}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 ml-0.5" />
                   </button>
                 )}
               </div>

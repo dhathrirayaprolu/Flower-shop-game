@@ -612,6 +612,8 @@ export default function App() {
             onPetCat={handlePetCat}
             onClaimQuest={handleClaimQuest}
             onStartCustomBouquet={handleStartCustomBouquet}
+            onVisitGarden={() => setActiveTab('garden')}
+            onNavigateTab={setActiveTab}
           />
         )}
 

@@ -42,11 +42,15 @@ export interface GardenPlot {
 export interface PlacedStem {
   uid: string;
   flowerId: string;
-  x: number; // -100 to 100 relative offset
-  y: number; // -100 to 100 relative offset
+  x: number; // -180 to 180 relative offset
+  y: number; // -180 to 180 relative offset
   rotation: number; // degrees
-  scale: number;
+  scale: number; // overall piece scale (0.5 to 2.0)
   layer: number;
+  flipped?: boolean;
+  stemLength?: number; // stem length factor (0.5 to 2.0)
+  flowerScale?: number; // bloom head scale factor (0.6 to 1.6)
+  stemCurve?: number; // stem curvature angle / bend (-30 to 30)
 }
 
 export interface WrapOption {

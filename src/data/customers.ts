@@ -85,32 +85,32 @@ export const RIBBON_OPTIONS: RibbonOption[] = [
 export const CARD_TAGS: CardTagOption[] = [
   {
     id: 'tag_birthday',
-    title: 'Happy Birthday!',
-    note: 'May your year bloom with endless wonder and quiet joy.',
+    title: 'Happy Birthday',
+    note: 'May your year bloom with radiant joy.',
     icon: '🎂',
   },
   {
     id: 'tag_sorry',
     title: 'Thinking of You',
-    note: 'From my heart to yours, sending warmth and sincere apologies.',
+    note: 'Sending warmth and heartfelt comfort.',
     icon: '🕊️',
   },
   {
     id: 'tag_love',
     title: 'With All My Heart',
-    note: 'Every petal carries a memory of why you are so cherished.',
+    note: 'Every petal holds my deepest love.',
     icon: '❤️',
   },
   {
     id: 'tag_gratitude',
     title: 'Warmest Thanks',
-    note: 'For your kindness, steady support, and bright presence.',
+    note: 'Thank you for your steady kindness.',
     icon: '🌿',
   },
   {
     id: 'tag_peace',
-    title: 'A Little Daily Sunshine',
-    note: 'Take a gentle breath, enjoy the fragrance, and smile.',
+    title: 'Daily Sunshine',
+    note: 'Take a gentle breath and smile.',
     icon: '☀️',
   },
 ];
